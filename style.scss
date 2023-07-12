@@ -1,0 +1,33 @@
+/* Variables */
+
+$color-one: #7f8fa6;
+$color-two: #9AA66F;
+$color-three: #A69390;
+$color-text: #ffffff;
+$color-text-inverted: #2c2c54;
+
+$font-text:'Inconsolata', monospace;
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-text;
+
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+section {
+    padding: 96px 0;
+}
