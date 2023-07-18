@@ -1,6 +1,8 @@
 /* Variables */
 /* Global */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -20,4 +22,127 @@ body {
 
 section {
   padding: 96px 0;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  font-family: "Inconsolata", monospace;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-one {
+  border-color: #fff;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, transparent));
+  background-image: linear-gradient(90deg, #fff 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 300%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.btn-one:hover {
+  background-position: 0 100%;
+  color: #7f8fa6;
+}
+
+/* Navigation */
+.navigation {
+  background-color: #7f8fa6;
+  padding: 12px 0;
+}
+.navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.navigation ul li {
+  display: inline-block;
+  margin: 0 36px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.navigation ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.navigation ul li a:hover {
+  color: #2c2c54;
+}
+
+.navigation ul ul li {
+  display: block;
+  margin: 0 0 12px 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: 10px;
+}
+
+.navigation li ul {
+  display: none;
+}
+
+.navigation li:hover ul {
+  display: block;
+  text-align: center;
+  position: absolute;
+  background-color: #fff;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: 12px;
+}
+
+.navigation li li a {
+  color: #2c2c54;
+  display: block;
+  padding: 0 24px;
+}
+
+.navigation li li a:hover {
+  color: #9aa66f;
+}
+
+/* Header */
+.splash {
+  background-color: #7f8fa6;
+  color: #fff;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.splash-inner {
+  margin: auto;
+  max-width: 70%;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 72px;
+  word-spacing: -24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.page-title span {
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+}
+
+.page-subtitle {
+  margin: 24px 0;
+  font-weight: 400;
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */

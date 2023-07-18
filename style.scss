@@ -1,25 +1,29 @@
 /* Variables */
 
 $color-one: #7f8fa6;
-$color-two: #9AA66F;
-$color-three: #A69390;
+$color-two: #9aa66f;
+$color-three: #a69390;
+$color-light: #fff;
 $color-text: #ffffff;
 $color-text-inverted: #2c2c54;
 
-$font-text:'Inconsolata', monospace;
+$font-text: 'Inconsolata', monospace;
+
+$tansition: all 1s;
 
 /* Global */
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.7;
-    font-family: $font-text;
-
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.7;
+	font-family: $font-text;
 }
 
 .container {
@@ -29,5 +33,126 @@ body {
 }
 
 section {
-    padding: 96px 0;
+	padding: 96px 0;
 }
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    font-family: $font-text;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-one {
+    border-color: $color-light;
+    color: $color-light;
+    background-image: linear-gradient(90deg, $color-light 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300%;
+    transition: $tansition;
+}
+
+.btn-one:hover {
+    background-position: 0 100%;
+    color: $color-one;
+}
+/* Navigation */
+
+.navigation {
+	background-color: $color-one;
+	padding: 12px 0;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			margin: 0 36px 0 0;
+			position: relative;
+			cursor: pointer;
+
+			a {
+				text-decoration: none;
+                color: $color-text;
+			}
+
+            a:hover {
+                color: $color-text-inverted;
+            }
+		}
+	}
+}
+
+.navigation ul ul li {
+    display: block;
+    margin: 0 0 12px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10px; 
+  }
+  
+  .navigation li ul {
+    display: none; 
+  }
+  
+  .navigation li:hover ul {
+    display: block;
+    text-align: center;
+    position: absolute;
+    background-color: $color-light;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+  }
+  
+  .navigation li li a {
+    color: $color-text-inverted;
+    display: block;
+    padding: 0 24px;
+  }
+  
+  .navigation li li a:hover {
+    color: $color-two; 
+  }
+
+  /* Header */
+
+  .splash {
+    background-color: $color-one;
+    color: $color-light;
+    min-height: 500px;
+    display: flex;
+  }
+
+  .splash-inner {
+    margin: auto;
+    max-width: 70%;
+  }
+
+  .page-title {
+    margin: 0;
+    font-size: 72px;
+    word-spacing: -24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .page-title span {
+    font-family: 'Signika', sans-serif;
+    font-weight: bold;
+  }
+
+  .page-subtitle {
+    margin: 24px 0;
+    font-weight: 400;
+    font-size: 16px;
+  }
