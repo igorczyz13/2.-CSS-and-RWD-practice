@@ -160,6 +160,7 @@ section {
 }
 
 /* Services */
+
 .our-services {
 	margin: 96px;
 }
@@ -234,4 +235,124 @@ p span {
 .box h2 {
     font-size: 24px;
     margin: 0 0 12px 0;
+}
+
+/* Work */
+
+.work-title {
+    font-size: 48px;
+    margin: 0 0 72px 0;
+}
+
+.box-work {
+    flex: 0 0 50%;
+    min-height: 200px;
+    margin: 0 0 96px 0;
+    position: relative;
+    max-height: 400px;
+}
+
+.box-work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-work p:last-of-type {
+    font-weight: 500; 
+    font-family: 'Signika', sans-serif;
+}
+
+.image {
+    height: 80%;
+    position: absolute;
+    width: 50%;
+}
+
+.image::after {
+    content: '';
+    position: absolute;
+    background-color: $color-two;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    left: 20px;
+    top: 20px;
+}
+
+.image:hover::after {
+    left: 0;
+    top: 0;
+    transition: $tansition;
+}
+
+.content {
+    padding: 0px 0px 100px 55%;
+    text-align: left;
+}
+
+.btn-five {
+    border: none;
+    margin: 36px 0;
+    padding: 0;
+    text-align: left;
+    color: $color-two;
+}
+
+.btn-five:hover {
+    color: $color-text-inverted
+}
+
+/* Contact */
+
+.contact {
+    background-color: $color-one;
+    color: $color-light;
+}
+
+.contact .wrapper {
+    min-height: 300px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contact-title {
+    font-size: 48px;
+    margin: 0 0 72px 0;
+}
+
+h3 {
+    font-size: 20px;
+}
+.contact-form {
+    flex: 2 0 0;
+    margin: 0 96px 0 0;
+}
+
+.contact-info {
+    flex: 1 0 0;
+}
+
+input,
+textarea {
+    background-color: $color-one;
+    color: $color-light;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: $color-light;
+	width: 100%;
+	height: 35px;
+	margin: 15px;
+	padding: 5px;
+}
+
+textarea {
+	height: 120px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: $color-light;
 }
